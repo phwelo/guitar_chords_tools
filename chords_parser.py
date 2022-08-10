@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 
 from spellchecker import SpellChecker
+import argparse
 
 input_file = "output.txt"
 
@@ -84,10 +85,12 @@ def lines_loop(parsing):
   for line in parsing.splitlines():
     yield classify_line(line, parsing)
 
-
-
 def main():
-  content = open_file(input_file)
+  parser = argparse.ArgumentParser()
+  parser.add_argument('--inputfile', default="output.txt", help='chords file')
+  args = parser.parse_args()
+
+  content = open_file(args.inputfile)
   parsing = map_replace_chords(plaintext_map, content)
 
   newlines = list(lines_loop(parsing))
