@@ -40,7 +40,7 @@ def get_tab_page(url):
 
 def main():
   song = Song(input_url)
-  print(song.tab_content)
+  print(json.dumps(song.__dict__))
 
 if __name__ == "__main__":
   main()
