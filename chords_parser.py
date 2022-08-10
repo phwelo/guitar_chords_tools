@@ -94,7 +94,7 @@ def main():
   parsing = map_replace_chords(plaintext_map, content)
 
   newlines = list(lines_loop(parsing))
-  # per line stuff
+  # get rid of blank lines
   res = [ele for ele in newlines if ele != None]
   return res
 
