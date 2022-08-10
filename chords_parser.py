@@ -85,18 +85,26 @@ def lines_loop(parsing):
   for line in parsing.splitlines():
     yield classify_line(line, parsing)
 
-def main():
+def parse_args():
   parser = argparse.ArgumentParser()
   parser.add_argument('--inputfile', default="output.txt", help='chords file')
-  args = parser.parse_args()
+  return parser.parse_args()
 
-  content = open_file(args.inputfile)
-  parsing = map_replace_chords(plaintext_map, content)
+def remove_blank_lines(list_of_lines):
+  return [ele for ele in list_of_lines if ele != None]
 
+def parse_chords(map, content):
+  parsing = map_replace_chords(map, content)
   newlines = list(lines_loop(parsing))
-  # get rid of blank lines
-  res = [ele for ele in newlines if ele != None]
+  res = remove_blank_lines(newlines)
   return res
+
+def main():
+  args = parse_args()
+  # need to work in an option for string
+  content = open_file(args.inputfile)
+  # high level parsing (for formatting and eventually transposing)
+  return parse_chords(plaintext_map, content)
 
 if __name__ == "__main__":
   print(main())
