@@ -4,7 +4,7 @@ import json
 import requests
 from bs4 import BeautifulSoup
 
-input_url = "https://tabs.ultimate-guitar.com/tab/bob-dylan/moonshiner-chords-544047"
+input_url = "https://tabs.ultimate-guitar.com/tab/steve-earle/copperhead-road-chords-1861944"
 
 class Song:
   def __init__(self, tab_url):
