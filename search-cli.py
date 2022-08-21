@@ -1,34 +1,94 @@
 #!/usr/bin/env python3
 
-import search
-import argparse
-import grab_song
-import chords_parser
+import argparse, os, re
+import search, grab_song, chords_parser
 from colorama import Fore, Style
 
-# Create the parser and add arguments
-parser = argparse.ArgumentParser()
-parser.add_argument(dest="search_query", help="Song and/or Artist of song to search for")
+def init():
+  windows_handler()
 
-search_results = search.get_songs_list(parser.parse_args().search_query)
+def setup_vt100():
+  import ctypes; kernel32 = ctypes.WinDLL('kernel32'); hStdOut = kernel32.GetStdHandle(-11); mode = ctypes.c_ulong(); kernel32.GetConsoleMode(hStdOut, ctypes.byref(mode)); mode.value |= 4; kernel32.SetConsoleMode(hStdOut, mode)
 
-for i, result in enumerate(search_results):
-  if "/pro/" in result["tab_url"]:
-    continue
-  print(Fore.BLUE + str(i + 1), Style.RESET_ALL + result["artist_name"], Fore.BLUE + "-" + Style.RESET_ALL, result["song_name"])
-  print(" " * len(str(i + 1)), Fore.LIGHTBLACK_EX + result["tab_url"] + Style.RESET_ALL)
+def parse_query():
+  parser = argparse.ArgumentParser()
+  parser.add_argument(
+    dest="search_query", 
+    help="Song and/or Artist of song to search for"
+  )
+  return parser.parse_args().search_query
+
+def print_option_line(num, artist, song, url):
+  print(Fore.CYAN + str(num) + ") " + \
+    Fore.WHITE + artist + Fore.LIGHTBLACK_EX + \
+      " - " + Fore.LIGHTCYAN_EX + song + \
+        Style.RESET_ALL)
+  print(" " * len(str(num)), Fore.LIGHTBLACK_EX + url + Style.RESET_ALL)
   print("")
 
-# should ensure that windows vt100 is used
-import ctypes; kernel32 = ctypes.WinDLL('kernel32'); hStdOut = kernel32.GetStdHandle(-11); mode = ctypes.c_ulong(); kernel32.GetConsoleMode(hStdOut, ctypes.byref(mode)); mode.value |= 4; kernel32.SetConsoleMode(hStdOut, mode)
+def colorize_line(line):
+  if line["type"] == "chord":
+    return Fore.CYAN + line["content"] + Style.RESET_ALL
+  elif line["type"] == "section":
+    return "\r\n" + Fore.LIGHTBLACK_EX + line["content"] + Style.RESET_ALL + "\r\n"
+  elif line["type"] == "preface":
+    return Fore.LIGHTCYAN_EX + line["content"] + Style.RESET_ALL
+  elif line["type"] == "tab":
+    return Fore.BLUE + line["content"] + Style.RESET_ALL
+  elif line["type"] == "text":
+    return Fore.WHITE + line["content"] + Style.RESET_ALL
+  else:
+    return line["content"]
 
-song_number = int(input("Choose a number, champ:")) - 1
-url = search_results[song_number]
-song = grab_song.Song(url["tab_url"])
-# print(chords_parser.parse_chords(song.tab_content))
-print(song.artist_name, song.song_name)
-# print("Capo:", song.capo_fret)
-print("")
-for line in chords_parser.parse_chords(song.tab_content):
-  print(line["content"])
-  # print(line)
+def show_choices(query_results):
+  query_results = remove_chordpro(query_results)
+  os.system("cls")
+  [
+    print_option_line(
+      i + 1, 
+      result["artist_name"], 
+      result["song_name"], 
+      result["tab_url"]
+    ) for i, result in enumerate(query_results)
+  ]
+
+remove_chordpro = lambda query_results: [
+    result for result in query_results if "/pro/" not in result["tab_url"] and "guitar-pro" not in result["tab_url"]
+  ]
+windows_handler = lambda : setup_vt100() if os.name == "nt" else None
+
+def tab_color(line):
+  line = Fore.CYAN + line
+  return re.sub("-", Fore.LIGHTBLACK_EX + "-" + Fore.CYAN, line)
+
+def output_lines(lines):
+  for line in lines:
+    if line["type"] == "tab":
+      for tabline in line["content"]:
+        print(tab_color(tabline))
+    else:
+      print(colorize_line(line))
+
+def query_user():
+  search_results = search.get_songs_list(parse_query())
+  show_choices(search_results) # Display the results
+  song_number = int(input("Choose a number, champ:")) - 1
+  return search_results[song_number]["tab_url"]
+
+def print_song(song):
+  # print(song.tab_content)
+  # exit()
+  os.system("cls")
+  print(Fore.LIGHTCYAN_EX + song.artist_name + Style.RESET_ALL)
+  print(Fore.CYAN + song.song_name)
+  print("")
+  output_lines(chords_parser.parse_chords(song.tab_content))
+
+def main():
+  init()
+  tab_url = query_user()
+  song = grab_song.Song(tab_url)
+  print_song(song)
+
+if __name__ == "__main__":
+  main()
