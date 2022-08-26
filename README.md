@@ -314,21 +314,14 @@ curl localhost:5000/api/v1/songs
 <details closed>
 <summary>/song/ - param: id of song from /songs list</summary>
 ```
-<see /download endpoint - same object>
+HTTP GET:
+-- see /download endpoint - same object --
+  
+HTTP POST:
+  send entire song json as body
+  returns "Success"
+  
+HTTP DELETE:
+  returns "Success"
 ```
 </details>
-  
-```
-HTTP POST:
-  modify the song json
-  /api/v1/song/<id>
-```
-<send as body the entire song json with edits>
-returns "Success"
-
-```
-HTTP DELETE:
-  delete the song
-  /api/v1/song/<id>
-```
-returns "Success"
