@@ -1,77 +1,95 @@
-From the album: The Bootleg Series 1-3
-
-
-
-Capo 4th fret (sounding key C# minor)
-
-Standard finger picking.
-
-[ch]C/G[/ch] (332010)
-
-
-
-
-
-[Intro]
-
-[ch]Am[/ch]  [ch]C/G[/ch]  [ch]F[/ch]  [ch]C/G[/ch]
-
-
-
-[Verse 1]
-
-[tab]     [ch]Am[/ch]     [ch]C/G[/ch] [ch]F[/ch]   [ch]C/G[/ch]                       [ch]G7[/ch]
-
-I've been a-a   moonshiner for seventeen long years[/tab]
-
-[tab]       [ch]Am[/ch]      [ch]C/G[/ch] [ch]F[/ch] [ch]C/G[/ch]                  [ch]G7[/ch]
-
-I've spent all my-y  money on whiskey an' beer[/tab]
-
-[tab]  [ch]F[/ch]          [ch]G[/ch]          [ch]C/G[/ch]       [ch]F[/ch]
-
-I go to some hollow and set up my still[/tab]
-
-[tab]       [ch]Am[/ch]   [ch]C/G[/ch] [ch]F[/ch]      [ch]C/G[/ch]                            [ch]G7[/ch]
-
-And if whiskey   don't kill me then I don't know what will.[/tab]
-
-
-
-[Verse 2]
-
-[tab]    [ch]Am[/ch]  [ch]C/G[/ch] [ch]F[/ch]    [ch]C/G[/ch]                        [ch]G7[/ch]
-
-I'd go to   some bar room and drink with my friends[/tab]
-
-[tab]          [ch]Am[/ch]  [ch]C/G[/ch] [ch]F[/ch]     [ch]C/G[/ch]                       [ch]G7[/ch]
-
-Where the women   can't follow an' see what I've spent[/tab]
-
-[tab]    [ch]F[/ch]                 [ch]G[/ch]        [ch]C/G[/ch]           [ch]F[/ch]
-
-God bless them pretty women, I wish they was mine[/tab]
-
-[tab]      [ch]Am[/ch]      [ch]C/G[/ch] [ch]F[/ch]   [ch]C/G[/ch]                    [ch]G7[/ch]
-
-Their breath is   as sweet as the dew on the vine.[/tab]
-
-
-
-[Verse 3]
-
-[tab]       [ch]Am[/ch]     [ch]C/G[/ch] [ch]F[/ch]   [ch]C/G[/ch]                           [ch]G7[/ch]    
-
-Let me eat when   I'm hungry, let me drink when I'm dry[/tab]
-
-[tab]     [ch]Am[/ch]          [ch]C/G[/ch] [ch]F[/ch]   [ch]C/G[/ch]                      [ch]G7[/ch]
-
-Hmm, dollars when    I'm hard up, religion when I die[/tab]
-
-[tab]    [ch]F[/ch]               [ch]G[/ch]          [ch]C/G[/ch]          [ch]F[/ch]
-
-The whole world's a bottle an' life's but a dram[/tab]
-
-[tab]       [ch]Am[/ch]  [ch]C/G[/ch] [ch]F[/ch]    [ch]C/G[/ch]                          [ch]G7[/ch]
-
-When a bottle  gets empty, it sure ain't worth a damn.[/tab]
+Steve Earle - Guitar Town
+Dropped D
+ 
+Intro
+  G                 ||x4
+-------3---------3--|
+-------3---------3--|
+-------0---0-0---0--|
+-------0---0-0---0--|
+--------------------|
+--4h5--5---5-5---5--|
+ 
+ 
+Verse 1
+  G                                                                            C        C  G/B
+ Hey pretty baby are you ready for me? It's your good rockin' daddy down from Tennessee
+D                                                     C                                 C*
+ I'm just outta Austin bound for San Antone with the radio blastin' and the Bird Dog on
+ 
+ C*
+ ---------------------------------|
+ ---------------------------------|
+ ---------------------------------|
+ ---------------------------------|
+ -2h3-3-3-2h3-3-3-2h3-3-3--3-2-0--|
+ ---------------------------------|
+ 
+   G                                                         C           C  G/B
+ Speed trap up ahead Selma town but no local yokel's gonna shut me down
+ D                                                    C                                     G*
+ Cause me and my boys got this rig unwound and we've come a thousand miles from the guitar town.
+ 
+Interlude
+ G               |C              |D             |C           G    ||
+------------------------------------------------------------------|
+------------------------------------------------------------------|
+------------------------------------------------------------------|
+----------------0-------------------------------------------------|
+-------2--0---2---3-----------3-2-0---------------3-2-0-----------|
+--5--5------5-----------0-2-5-------0-0---0-1-2-5-------5-4---5---|
+ 
+ 
+Verse 2
+  G                                                                     C           C  G/B
+ Nothin' ever happened round my home town and I ain't the kind to just hang around
+D                                              C                                     G
+ I heard someone callin' my name one day so I followed that voice down the lost highway
+                                                   C         C  G/B
+ Everybody told me you can't get far on $37 and a Jap guitar
+D                                                      C                                     G*
+ Now I'm smokin into Texas with the hammer down and a rockin' little combo from the guitar town.
+ 
+ 
+Interlude  (G*)   |C    |D    |C   G  ||
+ 
+Bridge
+  D
+ Hey pretty baby don't you know it ain't my fault
+  C                            G
+ Love to hear the steel belts hummin on the asphalt
+  D
+ Wake up in the middle of the night in a truck stop
+   C                         D7
+ Stumble in the restaurant, wonderin' why I don't stop
+ 
+Verse 3
+         G                                                               C         C   G/B
+ Well, I Gotta keep rockin while I still can got a two-pack habit and a motel tan
+D                                                         C                              C*
+ When my boots hit the boards I'm a brand new man put my back to the risers and make my stand
+G                                                                            C           C  G/B
+ Hey pretty baby won't you hold me tight, I'm loadin' up and rollin' out of here tonight
+D                                                  C                                   G*
+ One of these days I'm gonna settle down and I'll take you back with me to the guitar town
+ 
+ 
+ 
+Outro
+ G               |C              |D             |C                |
+------------------------------------------------------------------|
+------------------------------------------------------------------|
+------------------------------------------------------------------|
+----------------0-------------------------------------------------|
+-------2--0---2---3-----------3-2-0---------------3-2-0-----------|
+--5--5------5-----------0-2-5-------0-0---0-1-2-5-------5-4-------|
+ 
+ G               |C              |D             |C           G    ||
+------------------------------------------------------------------|
+------------------------------------------------------------------|
+------------------------------------------------------------------|
+----------------0-2-------------0---------------------------------|
+-------2--0---2---------------3---0---------------3-2-0-----------|
+-5--5------5-----------0-2-5-------0-0---0-1-2-5-------5-7br-5---|
+X
+By helping UG you make the world better... and earn IQ
