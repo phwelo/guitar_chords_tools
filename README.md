@@ -2,7 +2,6 @@
 
 ## Base: /api/v1
 
-##
 <details closed>
 <summary>/search/ - param: url escaped search string</summary>
 
