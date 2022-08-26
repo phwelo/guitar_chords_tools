@@ -2,7 +2,10 @@
 
 ## Base: /api/v1
 
-## <details><summary>/search/<query></summary>```
+<details open>
+<summary>/search/<searchstring></summary>
+
+```
 > curl localhost:5000/api/v1/search/This%20Heart%20Is%20On%20Fire
 
 [
@@ -63,7 +66,9 @@
     "votes": 0
   }
 ]
-```</details>
+```
+</details>
+
 
 
 ```
