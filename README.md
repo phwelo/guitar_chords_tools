@@ -2,9 +2,68 @@
 
 ## Base: /api/v1
 
-## <details><summary>/search/<query></summary>
-  Peek a boo!
-  </details>
+## <details><summary>/search/<query></summary>```
+> curl localhost:5000/api/v1/search/This%20Heart%20Is%20On%20Fire
+
+[
+  {
+    "artist_id": 12085,
+    "artist_name": "Wolf Parade",
+    "artist_url": "https://www.ultimate-guitar.com/artist/wolf_parade_12085",
+    "date": "1129680001",
+    "id": 264702,
+    "part": "",
+    "preset_id": 0,
+    "rating": 4.80031,
+    "recording": {
+      "is_acoustic": 0,
+      "performance": null,
+      "recording_artists": [],
+      "tonality_name": ""
+    },
+    "song_id": 163955,
+    "song_name": "This Heart Is On Fire",
+    "status": "approved",
+    "tab_access_type": "public",
+    "tab_url": "https://tabs.ultimate-guitar.com/tab/wolf-parade/this-heart-is-on-fire-chords-264702",
+    "tonality_name": "",
+    "tp_version": 0,
+    "type": "Chords",
+    "verified": 0,
+    "version": 1,
+    "version_description": null,
+    "votes": 10
+  },
+  {
+    "artist_id": 12085,
+    "artist_name": "Wolf Parade",
+    "artist_url": "https://www.ultimate-guitar.com/artist/wolf_parade_12085",
+    "date": "1129680001",
+    "id": 1279705,
+    "part": "",
+    "preset_id": 0,
+    "rating": 0,
+    "recording": {
+      "is_acoustic": 0,
+      "performance": null,
+      "recording_artists": [],
+      "tonality_name": ""
+    },
+    "song_id": 163955,
+    "song_name": "This Heart Is On Fire",
+    "status": "approved",
+    "tab_access_type": "public",
+    "tab_url": "https://tabs.ultimate-guitar.com/tab/wolf-parade/this-heart-is-on-fire-ukulele-1279705",
+    "tonality_name": "",
+    "tp_version": 0,
+    "type": "Ukulele Chords",
+    "verified": 0,
+    "version": 1,
+    "version_description": null,
+    "votes": 0
+  }
+]
+```</details>
 
 
 ```
