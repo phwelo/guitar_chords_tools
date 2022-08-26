@@ -2,8 +2,8 @@
 
 ## Base: /api/v1
 
-<details open>
-<summary>/search/\<searchstring\></summary>
+<details closed>
+# <summary>/search/\<searchstring\></summary>
 
 ```
 > curl localhost:5000/api/v1/search/This%20Heart%20Is%20On%20Fire
