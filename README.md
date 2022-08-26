@@ -302,24 +302,22 @@ curl localhost:5000/api/v1/download/https://tabs.ultimate-guitar.com/tab/wolf-pa
 }
 ```
 </details>
-```
-List songs in the "database":
-  /api/v1/songs
-```
 
+<details closed>
+<summary>/songs/ - no params: list all songs in "database"</summary>
 ```
 curl localhost:5000/api/v1/songs
 [{"artist_name": "Wolf Parade", "song_name": "Dear Sons And Daughters Of Hungry Ghosts", "id": "163942-12085"}, {"artist_name": "Wolf Parade", "song_name": "This Heart Is On Fire", "id": "163955-12085"}, {"artist_name": "Mandolin Orange", "song_name": "Daylight", "id": "1683654-37156"}, {"artist_name": "Passenger", "song_name": "Let Her Go", "id": "298037-21762"}]
 ```
+</details>
 
-
-```
-HTTP GET:
-  Get the song json
-  /api/v1/song/<id>
+<details closed>
+<summary>/song/ - param: id of song from /songs list</summary>
 ```
 <see /download endpoint - same object>
-
+```
+</details>
+  
 ```
 HTTP POST:
   modify the song json
