@@ -3,7 +3,7 @@
 ## Base: /api/v1
 
 ## /search/<query>
-<details><summary>## /search/<query></summary>Peek a boo!</details>
+## <details><summary>/search/<query></summary>Peek a boo!</details>
 ```
 > curl localhost:5000/api/v1/search/This%20Heart%20Is%20On%20Fire
 
