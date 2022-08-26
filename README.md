@@ -72,6 +72,7 @@ Base: /api/v1
 
 <details closed>
 <summary>/download/ - param: url of tabs/chords page</summary>
+
 ```
 curl localhost:5000/api/v1/download/https://tabs.ultimate-guitar.com/tab/wolf-parade/this-heart-is-on-fire-chords-264702
 {
@@ -300,12 +301,16 @@ curl localhost:5000/api/v1/download/https://tabs.ultimate-guitar.com/tab/wolf-pa
     }
   ]
 }
+  
 ```
+  
 </details>
 
 <details closed>
 <summary>/songs/ - no params: list all songs in "database"</summary>
+  
 ```
+  
 curl localhost:5000/api/v1/songs
 [
   {
@@ -329,12 +334,16 @@ curl localhost:5000/api/v1/songs
     "id": "298037-21762"
   }
 ]
+  
 ```
+  
 </details>
 
 <details closed>
 <summary>/song/ - param: id of song from /songs list</summary>
+  
 ```
+  
 HTTP GET:
 -- see /download endpoint - same object --
   
@@ -344,5 +353,7 @@ HTTP POST:
   
 HTTP DELETE:
   returns "Success"
+  
 ```
+  
 </details>
