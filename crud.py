@@ -43,7 +43,7 @@ def list_songs():
       })
   return json.dumps(songs)
 
-@app.route('/api/v1/song/<id>', methods = ['PUT', 'GET'])
+@app.route('/api/v1/song/<id>', methods = ['PUT', 'GET', 'DELETE'])
 def song_info(id):
   if request.method == 'GET':
     with open(os.path.join(storage_path, id + ".json"), "r", encoding="utf-8") as f:
@@ -52,7 +52,9 @@ def song_info(id):
     with open(os.path.join(storage_path, id + ".json"), "w", encoding="utf-8") as f:
       f.write(request.data)
     return "Success"
-
+  elif request.method == 'DELETE':
+    os.remove(os.path.join(storage_path, id + ".json"))
+    return "Success"
 
 if __name__ == '__main__':
   init()
