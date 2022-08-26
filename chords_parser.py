@@ -133,6 +133,7 @@ def consolidate_tabs(lines):
       else:
         yield line
 
+# everything really rolls up to here
 def parse_chords(content):
   '''basically the main, but i'm using this as a module'''
   newlines = list(lines_loop(content))

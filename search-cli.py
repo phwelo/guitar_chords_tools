@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 import argparse, os, re
-import search, grab_song, chords_parser
+import search, grab_song
 from colorama import Fore, Style
 
 def init():
@@ -82,7 +82,7 @@ def print_song(song):
   print(Fore.LIGHTCYAN_EX + song.artist_name + Style.RESET_ALL)
   print(Fore.CYAN + song.song_name)
   print("")
-  output_lines(chords_parser.parse_chords(song.tab_content))
+  output_lines(song.parsed)
 
 def main():
   init()

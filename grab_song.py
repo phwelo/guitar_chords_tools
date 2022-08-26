@@ -3,17 +3,21 @@
 import json
 import requests
 from bs4 import BeautifulSoup
+from chords_parser import parse_chords
 
 input_url = "https://tabs.ultimate-guitar.com/tab/steve-earle/copperhead-road-chords-1861944"
 
 class Song:
   def __init__(self, tab_url):
-    jstore = self.jstore_dump(tab_url)
-    self.tab_url = tab_url
+    jstore           = self.jstore_dump(tab_url)
+    self.id          = str(jstore["store"]["page"]["data"]["tab"]["song_id"]) + "-" + str(jstore["store"]["page"]["data"]["tab"]["artist_id"])
+    self.tab_url     = tab_url
     self.artist_name = jstore["store"]["page"]["data"]["tab"]["artist_name"]
-    self.song_name = jstore["store"]["page"]["data"]["tab"]["song_name"]
+    self.song_name   = jstore["store"]["page"]["data"]["tab"]["song_name"]
     self.tab_content = jstore["store"]["page"]["data"]["tab_view"]["wiki_tab"]["content"]
-    self.capo_fret = self.capo_handler(jstore)
+    self.capo_fret   = self.capo_handler(jstore)
+    self.parsed      = parse_chords(self.tab_content)
+
 
   def capo_handler(self, jstore):
     if "capo" in jstore["store"]["page"]["data"]["tab_view"]["wiki_tab"]["content"]:
