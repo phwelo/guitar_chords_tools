@@ -70,12 +70,8 @@ Base: /api/v1
 </details>
 
 
-
-```
-Download a song:
-  /api/v1/download/<url>
-```
-
+<details closed>
+<summary>/download/ - param: url of tabs/chords page</summary>
 ```
 curl localhost:5000/api/v1/download/https://tabs.ultimate-guitar.com/tab/wolf-parade/this-heart-is-on-fire-chords-264702
 {
@@ -305,7 +301,7 @@ curl localhost:5000/api/v1/download/https://tabs.ultimate-guitar.com/tab/wolf-pa
   ]
 }
 ```
-
+</details>
 ```
 List songs in the "database":
   /api/v1/songs
