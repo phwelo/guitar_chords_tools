@@ -3,7 +3,7 @@
 ## Base: /api/v1
 
 <details closed>
-# <summary>/search/\<searchstring\></summary>
+# <summary>/search/ - param: url escaped search string</summary>
 
 ```
 > curl localhost:5000/api/v1/search/This%20Heart%20Is%20On%20Fire
