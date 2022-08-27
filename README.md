@@ -71,7 +71,7 @@ Base: /api/v1
 
 
 <details closed>
-<summary>/download/ - param: url of tabs/chords page</summary>
+<summary>/download/ - param: url of tabs/chords page (worked great via curl but not through postman, lmk if any probs and we'll encode it or something)</summary>
 
 ```
 curl localhost:5000/api/v1/download/https://tabs.ultimate-guitar.com/tab/wolf-parade/this-heart-is-on-fire-chords-264702
